@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components Library</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    body {
+        background: #0F172A;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        color: #94A3B8;
+        text-decoration: none;
+        font-size: 2.4vh;
+        cursor: pointer;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .top {
+        position: fixed;
+        border-right: 1px solid #1E293B;
+        height: 100vh;
+        padding: 3vh;
+        user-select: none;
+    }
+
+    .top div ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5vh;
+        margin-top: 1.5vh;
+    }
+
+    .github {
+        position: fixed;
+        right: 3vh;
+        top: 3vh;
+    }
+
+    .github a ion-icon {
+        font-size: 5vh;
+    }
+
+    #textareaComponent,
+    #buttonComponent,
+    #textComponent,
+    #contactComponent,
+    #modalComponent,
+    #postComponent,
+    #alertComponent,
+    #dropdownComponent,
+    #navComponent,
+    #searchComponent,
+    #backgroundComponent {
+        display: none;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    #inputComponent {
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    .components {
+        padding: 3vh;
+        display: flex;
+        margin-left: 23%;
+    }
+
+    .options {
+        color: #0EA5E9;
+        font-size: 1.8vh;
+    }
+
+    h1 {
+        font-size: 3.6vh;
+        user-select: none;
+    }
+
+    .code {
+        background: #1E293B;
+        padding: 2vh;
+        border-radius: 1vh;
+        width: 100vh;
+        font-size: 1.8vh;
+        border: 1px solid #353F4F;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .code span {
+        color: #7DD1DC
+    }
+
+    .code label {
+        color: #64748B;
+    }
+
+    .code h3 {
+        margin-top: 20px;
+    }
+
+    .components h2 {
+        color: #F472B6;
+    }
+</style>
+
+<body>
+    <div class="top">
+        <div>
+            <h1>Components</h1>
+            <ul>
+                <li onclick='showInput()'><a>&#60;Input /&#62;</a></li>
+                <li onclick='showTextarea()'><a>&#60;Textarea /&#62;</a></li>
+                <li onclick='showButton()'><a>&#60;Button /&#62; or &#60;Button&#62;&#60;/Button&#62;</a></li>
+                <li onclick='showText()'><a>&#60;Text&#62;&#60;/Text&#62;</a></li>
+                <li onclick='showContact()'><a>&#60;Contact&#62;&#60;/Contact&#62;</a></li>
+                <li onclick='showModal()'><a>&#60;Modal&#62;&#60;/Modal&#62;</a></li>
+                <li onclick='showPost()'><a>&#60;Post&#62;&#60;/Post&#62;</a></li>
+                <li onclick='showAlert()'><a>&#60;Alert /&#62;</a></li>
+                <li onclick='showDropDown()'><a>&#60;DropDown /&#62;</a></li>
+                <li onclick='showNav()'><a>&#60;Nav /&#62;</a></li>
+                <li onclick='showSearch()'><a>&#60;Search /&#62;</a></li>
+                <li onclick='showBackGround()'><a>&#60;BackGround /&#62;</a></li>
+            </ul>
+        </div>
+        <div class="github">
+            <a href="https://github.com/STAPE-Web/react-native-components-stape">
+                <ion-icon name="logo-github" class=""></ion-icon>
+            </a>
+        </div>
+    </div>
+
+    <div class="components">
+        <!-- Input -->
+        <div id="inputComponent">
+            <h1>&#60;Input /&#62;</h1>
+            <h3 class="options">Options</h3>
+            <div class='code'>
+                <p>theme<label>='<span>black</span> or <span>white</span>'</label></p>
+                <p>outline<label>='<span>true</span> or <span>false</span>}</label></p>
+                <p>placeholder<label>='<span>Enter text:</span>'</label></p>
+                <p>placeholderColor<label>='<span>#828282</span>'</label></p>
+                <h3>State</h3>
+                <p>value<label>='<span>input</span>}</label></p>
+                <p>onChange<label>='<span>e => setInput(e.target.value)</span>}</label></p>
+            </div>
+        </div>
+
+        <!-- Textarea -->
+        <div id="textareaComponent">
+            <h1>&#60;Textarea /&#62;</h1>
+            <h3 class="options">Options</h3>
+            <div class='code'>
+                <p>theme<label>='<span>black</span> or <span>white</span>'</label></p>
+                <p>outline<label>='<span>true</span> or <span>false</span>}</label></p>
+                <p>placeholder<label>='<span>Enter text:</span>'</label></p>
+                <p>placeholderColor<label>='<span>#828282</span>'</label></p>
+                <p>height<label>='<span>200</span>}</label></p>
+
+                <h3>State</h3>
+                <p>value<label>='<span>textarea</span>}</label></p>
+                <p>onChange<label>='<span>e => setTextarea(e.target.value)</span>}</label></p>
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div id="buttonComponent">
+            <h1>&#60;Button /&#62; or &#60;Button&#62;&#60;/Button&#62;</h1>
+            <h3 class="options">Options</h3>
+            <div class='code'>
+                <p>theme<label>='<span>black</span> or <span>white</span>'</label></p>
+                <p>outline<label>='<span>true</span> or <span>false</span>}</label></p>
+                <p>value<label>='<span>Send</span>'</label></p>
+                <p>width<label>='<span>250</span>}</label></p>
+                <p>onClick<label>='<span>function()</span>}</label></p>
+            </div>
+        </div>
+
+        <!-- Text -->
+        <div id="textComponent">
+            <h1>&#60;Text&#62;&#60;/Text&#62;</h1>
+            <h3 class="options">Options</h3>
+            <div class='code'>
+                <p>size<label>='<span>36</span>}</label></p>
+                <p>style<label>='<span>styles.text</span>}</label></p>
+                <p>value<label>='<span>Send</span>'</label></p>
+                <p>width<label>='<span>250</span>}</label></p>
+                <p>onClick<label>='<span>function()</span>}</label></p>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div id="contactComponent">
+            <h1>&#60;Contact&#62;&#60;/Contact&#62;</h1>
+            <h3 class="options">Options</h3>
+            <div class='code'>
+                <p>style<label>='<span>styles.form</span>}</label></p>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="modalComponent">
+            <h1>&#60;Modal&#62;&#60;/Modal&#62;</h1>
+            <h3 class="options">Options</h3>
+            <div class='code'>
+                <p>theme<label>='<span>black</span> or <span>white</span>'</label></p>
+
+                <h3>State</h3>
+                <p>modal<label>='<span>modal</span>}</label></p>
+                <p>setModal<label>='<span>setModal</span>}</label></p>
+            </div>
+            <h2>Important: Create State <span>const [modal, setModal] = useState(false)</span></h2>
+        </div>
+
+        <!-- Post -->
+        <div id="postComponent">
+            <h1>&#60;Post&#62;&#60;/Post&#62;</h1>
+            <h3 class="options">Options</h3>
+            <div class='code'>
+                <p>image<label>='<span>{ uri:
+                            'https://yourImage.com'}</span>}</label></p>
+                <p>imgWidth<label>='<span>100%</span>'</label></p>
+                <p>imgHeight<label>='<span>250</span>}</label></p>
+                <p>onClick<label>='<span>onClick</span>}</label></p>
+            </div>
+        </div>
+
+        <!-- Alert -->
+        <div id="alertComponent">
+            <h1>&#60;Alert /&#62;</h1>
+            <h3 class="options">Options</h3>
+            <div class='code'>
+                <p>value<label>='<span>Value</span>'</label></p>
+                <p>theme<label>='<span>black</span> or <span>white</span>'</label></p>
+                <p>time<label>='<span>2</span>}</label></p>
+            </div>
+        </div>
+
+        <!-- DropDown -->
+        <div id="dropdownComponent">
+            <h1>&#60;DropDown /&#62;</h1>
+            <h3 class="options">Options</h3>
+            <div class='code'>
+                <p>obj<label>='<span>obj</span>}</label></p>
+                <p>textSize<label>='<span>18</span>}</label></p>
+                <p>width<label>='<span>250</span>}</label></p>
+
+                <h3>State</h3>
+                <p>dropDown<label>='<span>dropdown</span>}</label></p>
+            </div>
+            <h2>Important: Create a new object {id, name, active}</h2>
+        </div>
+
+        <!-- Nav -->
+        <div id="navComponent">
+            <h1>&#60;Nav /&#62;</h1>
+            <h3 class="options">Options</h3>
+            <div class='code'>
+                <p>icons<label>='<span>icons</span>}</label></p>
+                <p>theme<label>='<span>black</span> or <span>white</span>'</label></p>
+
+                <h3>State</h3>
+                <p>dropDown<label>='<span>dropdown</span>}</label></p>
+            </div>
+            <h2>Important: Create a new object {id, icon, width, height, onClick: () => {open()}}</h2>
+        </div>
+
+        <!-- Search -->
+        <div id="searchComponent">
+            <h1>&#60;Search /&#62;</h1>
+            <h3 class="options">Options</h3>
+            <div class='code'>
+                <p>theme<label>='<span>black</span> or <span>white</span>'</label></p>
+                <p>outline<label>='<span>true</span> or <span>false</span>}</label></p>
+                <p>placeholder<label>='<span>Enter text:</span>'</label></p>
+                <p>placeholderColor<label>='<span>#828282</span>'</label></p>
+                <h3>State</h3>
+                <p>value<label>='<span>search</span>}</label></p>
+                <p>onChange<label>='<span>e => setSearch(e.target.value)</span>}</label></p>
+            </div>
+        </div>
+
+        <!-- BackGround -->
+        <div id="backgroundComponent">
+            <h1>&#60;BackGround /&#62;</h1>
+            <h3 class="options">Options</h3>
+            <div class='code'>
+                <p>brightness<label>='<span>100%</span>'</label></p>
+                <p>source<label>='<span>{ uri:
+                            'https://yourImage.com'}</span>}</label></p>
+                <p>placeholder<label>='<span>Enter text:</span>'</label></p>
+                <p>placeholderColor<label>='<span>#828282</span>'</label></p>
+                <h3>State</h3>
+                <p>value<label>='<span>search</span>}</label></p>
+                <p>onChange<label>='<span>e => setSearch(e.target.value)</span>}</label></p>
+            </div>
+        </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    const inputComponent = document.querySelector('#inputComponent');
+    const textareaComponent = document.querySelector('#textareaComponent');
+    const buttonComponent = document.querySelector('#buttonComponent');
+    const textComponent = document.querySelector('#textComponent');
+    const contactComponent = document.querySelector('#contactComponent');
+    const modalComponent = document.querySelector('#modalComponent');
+    const postComponent = document.querySelector('#postComponent');
+    const alertComponent = document.querySelector('#alertComponent');
+    const dropdownComponent = document.querySelector('#dropdownComponent');
+    const navComponent = document.querySelector('#navComponent');
+    const searchComponent = document.querySelector('#searchComponent');
+    const backgroundComponent = document.querySelector('#backgroundComponent');
+
+    const showInput = () => {
+        inputComponent.style.display = 'flex';
+        textareaComponent.style.display = 'none';
+        buttonComponent.style.display = 'none';
+        textComponent.style.display = 'none';
+        contactComponent.style.display = 'none';
+        modalComponent.style.display = 'none';
+        postComponent.style.display = 'none';
+        alertComponent.style.display = 'none';
+        dropdownComponent.style.display = 'none';
+        navComponent.style.display = 'none';
+        searchComponent.style.display = 'none';
+        backgroundComponent.style.display = 'none';
+    }
+    const showTextarea = () => {
+        inputComponent.style.display = 'none';
+        textareaComponent.style.display = 'flex';
+        buttonComponent.style.display = 'none';
+        textComponent.style.display = 'none';
+        contactComponent.style.display = 'none';
+        modalComponent.style.display = 'none';
+        postComponent.style.display = 'none';
+        alertComponent.style.display = 'none';
+        dropdownComponent.style.display = 'none';
+        navComponent.style.display = 'none';
+        searchComponent.style.display = 'none';
+        backgroundComponent.style.display = 'none';
+    }
+    const showButton = () => {
+        inputComponent.style.display = 'none';
+        textareaComponent.style.display = 'none';
+        buttonComponent.style.display = 'flex';
+        textComponent.style.display = 'none';
+        contactComponent.style.display = 'none';
+        modalComponent.style.display = 'none';
+        postComponent.style.display = 'none';
+        alertComponent.style.display = 'none';
+        dropdownComponent.style.display = 'none';
+        navComponent.style.display = 'none';
+        searchComponent.style.display = 'none';
+        backgroundComponent.style.display = 'none';
+    }
+    const showText = () => {
+        inputComponent.style.display = 'none';
+        textareaComponent.style.display = 'none';
+        buttonComponent.style.display = 'none';
+        textComponent.style.display = 'flex';
+        contactComponent.style.display = 'none';
+        modalComponent.style.display = 'none';
+        postComponent.style.display = 'none';
+        alertComponent.style.display = 'none';
+        dropdownComponent.style.display = 'none';
+        navComponent.style.display = 'none';
+        searchComponent.style.display = 'none';
+        backgroundComponent.style.display = 'none';
+    }
+    const showContact = () => {
+        inputComponent.style.display = 'none';
+        textareaComponent.style.display = 'none';
+        buttonComponent.style.display = 'none';
+        textComponent.style.display = 'none';
+        contactComponent.style.display = 'flex';
+        modalComponent.style.display = 'none';
+        postComponent.style.display = 'none';
+        alertComponent.style.display = 'none';
+        dropdownComponent.style.display = 'none';
+        navComponent.style.display = 'none';
+        searchComponent.style.display = 'none';
+        backgroundComponent.style.display = 'none';
+    }
+    const showModal = () => {
+        inputComponent.style.display = 'none';
+        textareaComponent.style.display = 'none';
+        buttonComponent.style.display = 'none';
+        textComponent.style.display = 'none';
+        contactComponent.style.display = 'none';
+        modalComponent.style.display = 'flex';
+        postComponent.style.display = 'none';
+        alertComponent.style.display = 'none';
+        dropdownComponent.style.display = 'none';
+        navComponent.style.display = 'none';
+        searchComponent.style.display = 'none';
+        backgroundComponent.style.display = 'none';
+    }
+    const showPost = () => {
+        inputComponent.style.display = 'none';
+        textareaComponent.style.display = 'none';
+        buttonComponent.style.display = 'none';
+        textComponent.style.display = 'none';
+        contactComponent.style.display = 'none';
+        modalComponent.style.display = 'none';
+        postComponent.style.display = 'flex';
+        alertComponent.style.display = 'none';
+        dropdownComponent.style.display = 'none';
+        navComponent.style.display = 'none';
+        searchComponent.style.display = 'none';
+        backgroundComponent.style.display = 'none';
+    }
+    const showAlert = () => {
+        inputComponent.style.display = 'none';
+        textareaComponent.style.display = 'none';
+        buttonComponent.style.display = 'none';
+        textComponent.style.display = 'none';
+        contactComponent.style.display = 'none';
+        modalComponent.style.display = 'none';
+        postComponent.style.display = 'none';
+        alertComponent.style.display = 'flex';
+        dropdownComponent.style.display = 'none';
+        navComponent.style.display = 'none';
+        searchComponent.style.display = 'none';
+        backgroundComponent.style.display = 'none';
+    }
+    const showDropDown = () => {
+        inputComponent.style.display = 'none';
+        textareaComponent.style.display = 'none';
+        buttonComponent.style.display = 'none';
+        textComponent.style.display = 'none';
+        contactComponent.style.display = 'none';
+        modalComponent.style.display = 'none';
+        postComponent.style.display = 'none';
+        alertComponent.style.display = 'none';
+        dropdownComponent.style.display = 'flex';
+        navComponent.style.display = 'none';
+        searchComponent.style.display = 'none';
+        backgroundComponent.style.display = 'none';
+    }
+    const showNav = () => {
+        inputComponent.style.display = 'none';
+        textareaComponent.style.display = 'none';
+        buttonComponent.style.display = 'none';
+        textComponent.style.display = 'none';
+        contactComponent.style.display = 'none';
+        modalComponent.style.display = 'none';
+        postComponent.style.display = 'none';
+        alertComponent.style.display = 'none';
+        dropdownComponent.style.display = 'none';
+        navComponent.style.display = 'flex';
+        searchComponent.style.display = 'none';
+        backgroundComponent.style.display = 'none';
+    }
+    const showSearch = () => {
+        inputComponent.style.display = 'none';
+        textareaComponent.style.display = 'none';
+        buttonComponent.style.display = 'none';
+        textComponent.style.display = 'none';
+        contactComponent.style.display = 'none';
+        modalComponent.style.display = 'none';
+        postComponent.style.display = 'none';
+        alertComponent.style.display = 'none';
+        dropdownComponent.style.display = 'none';
+        navComponent.style.display = 'none';
+        searchComponent.style.display = 'flex';
+        backgroundComponent.style.display = 'none';
+    }
+    const showBackGround = () => {
+        inputComponent.style.display = 'none';
+        textareaComponent.style.display = 'none';
+        buttonComponent.style.display = 'none';
+        textComponent.style.display = 'none';
+        contactComponent.style.display = 'none';
+        modalComponent.style.display = 'none';
+        postComponent.style.display = 'none';
+        alertComponent.style.display = 'none';
+        dropdownComponent.style.display = 'none';
+        navComponent.style.display = 'none';
+        searchComponent.style.display = 'none';
+        backgroundComponent.style.display = 'flex';
+    }
+</script>
+
+</html>
