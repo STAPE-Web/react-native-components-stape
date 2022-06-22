@@ -170,8 +170,8 @@
                 <p>placeholder<label>='<span>Enter text:</span>'</label></p>
                 <p>placeholderColor<label>='<span>#828282</span>'</label></p>
                 <h3>State</h3>
-                <p>value<label>='<span>input</span>}</label></p>
-                <p>onChange<label>='<span>e => setInput(e.target.value)</span>}</label></p>
+                <p>value<label>={<span>input</span>}</label></p>
+                <p>onChange<label>={<span>e => setInput(e.target.value)</span>}</label></p>
             </div>
         </div>
 
@@ -181,14 +181,14 @@
             <h3 class="options">Options</h3>
             <div class='code'>
                 <p>theme<label>='<span>black</span> or <span>white</span>'</label></p>
-                <p>outline<label>='<span>true</span> or <span>false</span>}</label></p>
+                <p>outline<label>={<span>true</span> or <span>false</span>}</label></p>
                 <p>placeholder<label>='<span>Enter text:</span>'</label></p>
                 <p>placeholderColor<label>='<span>#828282</span>'</label></p>
-                <p>height<label>='<span>200</span>}</label></p>
+                <p>height<label>={<span>200</span>}</label></p>
 
                 <h3>State</h3>
-                <p>value<label>='<span>textarea</span>}</label></p>
-                <p>onChange<label>='<span>e => setTextarea(e.target.value)</span>}</label></p>
+                <p>value<label>={<span>textarea</span>}</label></p>
+                <p>onChange<label>={<span>e => setTextarea(e.target.value)</span>}</label></p>
             </div>
         </div>
 
@@ -198,10 +198,10 @@
             <h3 class="options">Options</h3>
             <div class='code'>
                 <p>theme<label>='<span>black</span> or <span>white</span>'</label></p>
-                <p>outline<label>='<span>true</span> or <span>false</span>}</label></p>
+                <p>outline<label>={<span>true</span> or <span>false</span>}</label></p>
                 <p>value<label>='<span>Send</span>'</label></p>
-                <p>width<label>='<span>250</span>}</label></p>
-                <p>onClick<label>='<span>function()</span>}</label></p>
+                <p>width<label>={<span>250</span>}</label></p>
+                <p>onClick<label>={<span>function()</span>}</label></p>
             </div>
         </div>
 
@@ -210,8 +210,8 @@
             <h1>&#60;Text&#62;&#60;/Text&#62;</h1>
             <h3 class="options">Options</h3>
             <div class='code'>
-                <p>size<label>='<span>36</span>}</label></p>
-                <p>style<label>='<span>styles.text</span>}</label></p>
+                <p>size<label>={<span>36</span>}</label></p>
+                <p>style<label>={<span>styles.text</span>}</label></p>
             </div>
         </div>
 
@@ -220,7 +220,7 @@
             <h1>&#60;Contact&#62;&#60;/Contact&#62;</h1>
             <h3 class="options">Options</h3>
             <div class='code'>
-                <p>style<label>='<span>styles.form</span>}</label></p>
+                <p>style<label>={<span>styles.form</span>}</label></p>
             </div>
         </div>
 
@@ -232,8 +232,8 @@
                 <p>theme<label>='<span>black</span> or <span>white</span>'</label></p>
 
                 <h3>State</h3>
-                <p>modal<label>='<span>modal</span>}</label></p>
-                <p>setModal<label>='<span>setModal</span>}</label></p>
+                <p>modal<label>={<span>modal</span>}</label></p>
+                <p>setModal<label>={<span>setModal</span>}</label></p>
             </div>
             <h2>Important: Create State <span>const [modal, setModal] = useState(false)</span></h2>
         </div>
@@ -243,11 +243,11 @@
             <h1>&#60;Post&#62;&#60;/Post&#62;</h1>
             <h3 class="options">Options</h3>
             <div class='code'>
-                <p>image<label>='<span>{ uri:
+                <p>image<label>={<span>{ uri:
                             'https://yourImage.com'}</span>}</label></p>
                 <p>imgWidth<label>='<span>100%</span>'</label></p>
-                <p>imgHeight<label>='<span>250</span>}</label></p>
-                <p>onClick<label>='<span>onClick</span>}</label></p>
+                <p>imgHeight<label>={<span>250</span>}</label></p>
+                <p>onClick<label>={<span>onClick</span>}</label></p>
             </div>
         </div>
 
@@ -267,12 +267,12 @@
             <h1>&#60;DropDown /&#62;</h1>
             <h3 class="options">Options</h3>
             <div class='code'>
-                <p>obj<label>='<span>obj</span>}</label></p>
-                <p>textSize<label>='<span>18</span>}</label></p>
-                <p>width<label>='<span>250</span>}</label></p>
+                <p>obj<label>={<span>obj</span>}</label></p>
+                <p>textSize<label>={<span>18</span>}</label></p>
+                <p>width<label>={<span>250</span>}</label></p>
 
                 <h3>State</h3>
-                <p>dropDown<label>='<span>dropdown</span>}</label></p>
+                <p>dropDown<label>={<span>dropdown</span>}</label></p>
             </div>
             <h2>Important: Create a new object {id, name, active}</h2>
         </div>
@@ -282,7 +282,7 @@
             <h1>&#60;Nav /&#62;</h1>
             <h3 class="options">Options</h3>
             <div class='code'>
-                <p>icons<label>='<span>icons</span>}</label></p>
+                <p>icons<label>={<span>icons</span>}</label></p>
                 <p>theme<label>='<span>black</span> or <span>white</span>'</label></p>
             </div>
             <h2>Important: Create a new object {id, icon, width, height, onClick: () => {open()}}</h2>
@@ -294,12 +294,12 @@
             <h3 class="options">Options</h3>
             <div class='code'>
                 <p>theme<label>='<span>black</span> or <span>white</span>'</label></p>
-                <p>outline<label>='<span>true</span> or <span>false</span>}</label></p>
+                <p>outline<label>={<span>true</span> or <span>false</span>}</label></p>
                 <p>placeholder<label>='<span>Enter text:</span>'</label></p>
                 <p>placeholderColor<label>='<span>#828282</span>'</label></p>
                 <h3>State</h3>
-                <p>value<label>='<span>search</span>}</label></p>
-                <p>onChange<label>='<span>e => setSearch(e.target.value)</span>}</label></p>
+                <p>value<label>={<span>search</span>}</label></p>
+                <p>onChange<label>={<span>e => setSearch(e.target.value)</span>}</label></p>
             </div>
         </div>
 
@@ -309,7 +309,7 @@
             <h3 class="options">Options</h3>
             <div class='code'>
                 <p>brightness<label>='<span>100%</span>'</label></p>
-                <p>source<label>='<span>{ uri:
+                <p>source<label>={<span>{ uri:
                             'https://yourImage.com'}</span>}</label></p>
             </div>
         </div>
